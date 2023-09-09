@@ -24,4 +24,12 @@ impl<'a>  Param<'a> {
             search_source:search_from
         })
     }
+
+    pub fn search_value(&self) -> &String {
+        self.search_value
+    }
+
+    pub fn search_source(&self) -> &String {
+        self.search_source
+    }
 }

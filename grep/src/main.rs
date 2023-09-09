@@ -2,6 +2,7 @@ use std::env;
 mod terminal;
 
 use terminal::param::{Param};
+use crate::terminal::search::search;
 
 fn main() {
     let args:Vec<String> = env::args().collect();
@@ -13,6 +14,7 @@ fn main() {
             param = some},
         None => return,
     }
-
     println!("参数解析结果{:?}",param);
+    search(&param);
+
 }
